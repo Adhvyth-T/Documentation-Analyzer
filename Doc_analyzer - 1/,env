@@ -1,0 +1,3 @@
+# Documentation Analyzer Config
+OPENROUTER_API_KEY="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"
+DEFAULT_MODEL="deepseek/deepseek-r1-0528-qwen3-8b:free"  # Or other model IDs
