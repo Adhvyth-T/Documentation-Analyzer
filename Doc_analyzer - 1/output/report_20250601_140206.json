@@ -1,0 +1,186 @@
+{
+    "status": "success",
+    "url": "https://help.moengage.com/hc/en-us/articles/360035738832-Explore-the-Number-of-Notifications-Received-by-Users#custom-distribution-0-1",
+    "analysis_type": "all",
+    "results": {
+        "readability": [
+            {
+                "overall_readability_comment": "The target audience is a non-technical marketer. While some topics like SPF authentication and padding might need further simplification or margin notes for a marketing audience, the current grade level suggests it may still be dense for their primary level of expertise.",
+                "problematic_sentences_and_simplifications": [
+                    {
+                        "problematic_sentence": "Best Practices for Email Deliverability",
+                        "suggestion": "Email Sending Guidelines\n\nOr\n\nHow to Keep Your Emails Delivering (Not Marked as Spam)"
+                    },
+                    {
+                        "problematic_sentence": "FAQ Regarding Ramp Up",
+                        "suggestion": "Email Sending Volume Guide FAQ\n\nOr\n\nHow to Gradually Grow Your Email Sending FAQ"
+                    },
+                    {
+                        "problematic_sentence": "FAQ Regarding Email Senders",
+                        "suggestion": "Email Sender Reputation FAQ\n\nOr\n\nHow to Build a Reliable Email Sender FAQ"
+                    },
+                    {
+                        "problematic_sentence": "FAQ Regarding Google Postmaster Data",
+                        "suggestion": "Understanding Google's Sender Score FAQ\n\nOr\n\nBest Practices for Google Postmaster Data FAQ"
+                    },
+                    {
+                        "problematic_sentence": "FAQ Regarding Email Delivery Rates",
+                        "suggestion": "Email Performance Metrics FAQ\n\nOr\nHow to Track How Many People Actually Get Your Emails FAQ"
+                    },
+                    {
+                        "problematic_sentence": "Self Debugging Email Deliverability Issues",
+                        "suggestion": "Troubleshooting Common Email Bounce & Block Issues\n\nOr\n\nStep-by-Step Guide to Fix Email Delivery Problems"
+                    },
+                    {
+                        "problematic_sentence": "Brand Indicators for Message Identification (BIMI)",
+                        "suggestion": "Using Your Logo Officially in Emails (BIMI Explained)\n\nOr\n\nMake Your Emails Stand Out with Your Logo FAQ"
+                    },
+                    {
+                        "problematic_sentence": "Avoid Spam Traps",
+                        "suggestion": "How to Steer Clear of Email Trap Addresses\n\nOr\n\nBest Practices for Keeping Your List Clean (Avoiding Spam Traps)"
+                    },
+                    {
+                        "problematic_sentence": "FAQs - Email",
+                        "suggestion": "Email Marketing Guide FAQs\n\nOr\n\nCommon Email Marketing Questions Answered"
+                    },
+                    {
+                        "problematic_sentence": "What is Bot Activity in Email Marketing?",
+                        "suggestion": "How to Identify Automated Email Scanning Tools\n\nOr\n\nUnderstanding if Emailsyms Check Your Marketing Emails (Bot Activity)"
+                    },
+                    {
+                        "problematic_sentence": "How to Find Users With Bounced Emails?",
+                        "suggestion": "How to Spot Subscribers Who Are Not Receiving Emails Anymore\n\nOr\n\nStep-by-Step: Cleaning Stale Email Addressess"
+                    },
+                    {
+                        "problematic_sentence": "Why Does the Padding of an HTML Content Block Impact the Entire Template?",
+                        "suggestion": "Why is the Whitespace Around Email Content So Important?\n\nOr\n\nSimple Tip: What Margins Matter Most in Fixed-Width Email(tmiles)"
+                    }
+                ]
+            },
+            {
+                "overall_readability_comment": "The provided documentation list indicates a technical platform with backend and scripting concepts (Control Groups, Jinja Templating Language). However, the provided grade level (34.9) indicates complex phrasing and terminology is already in place. Simplification focuses on explaining these technical elements IN A WAY THAT A MARKETER CAN UNDERSTAND THEM WITHOUT NEEDING DETAILED TECHNICAL KNOWLEDGE (e.g., how the template logic works, not 'Python').",
+                "problematic_sentences_and_simplified_alternatives": [
+                    {
+                        "problematic_sentences": "Control Groups - Technical Concept",
+                        "simplified_alternatives": "How different user groups interact or respond to campaigns (a reserved term)."
+                    },
+                    {
+                        "problematic_sentences": "Campaign Tags",
+                        "problematic_sentences_explanation": "Avoid terms like 'CRM', 'CMS', 'CDN', 'API'.",
+                        "simplified_alternatives": "How to organize and find your campaigns (like folders)."
+                    },
+                    {
+                        "problematic_sentences": "Business Event Triggered Campaigns",
+                        "simplified_alternatives": "What happens when a user performs a specific action (e.g., added to cart, completed purchase), and you want to send them a message right then."
+                    },
+                    {
+                        "problematic_sentences": "Jinja Templating Language",
+                        "simplified_alternatives": "A system for automatically inserting personalized details into messages (based on customer attributes)."
+                    },
+                    {
+                        "problematic_sentences": "Personalize Content Using Recommendations",
+                        "problematic_sentences_explanation": "Avoid terms that might imply complex algorithms.",
+                        "simplified_alternatives": "How to show different campaign content options based on what your customers might like (e.g., suggesting similar products)."
+                    }
+                ]
+            }
+        ],
+        "structure": [
+            {
+                "assessments": {
+                    "headings_and_subheadings": {
+                        "issue": "Headings are flat with no hierarchical structure, lacking parent-child relationships. This can be confusing and makes navigation difficult.",
+                        "suggestion": "Organize topics into logical sections (e.g., 'Basic Operations', 'Advanced Features', 'Analysis Tools') to improve navigation and user experience."
+                    },
+                    "paragraphs": {
+                        "issue": "Length of paragraphs cannot be assessed without actual content.",
+                        "status": "N/A",
+                        "comment": "Assessment cannot be performed due to insufficient context regarding paragraph length."
+                    },
+                    "bullet_points": {
+                        "issue": "No bullet points are present, but feature descriptions require them for clarity and readability.",
+                        "suggestion": "Use bullet points for explaining multiple steps, additional details, or options in each topic to enhance comprehension and scanability."
+                    },
+                    "logical_order": {
+                        "issue": "Topics lack progression, moving directly from basic actions to complex intelligence without a clear learning curve.",
+                        "suggestion": "Rearrange topics to follow a cognitive journey: (1) Foundational actions (Add Actions, Branching) (2) Analysis and debugging (Edit, Analyze) (3) Advanced personalization and intelligence (Personalization, AI-driven insights) (4) Experimentation and FAQs."
+                    }
+                }
+            },
+            {
+                "findings": [
+                    "Headings and subheadings are generally descriptive but inconsistent in naming (e.g., 'Overview' vs 'Overview - Inform')",
+                    "Paragraphs appear to be implied, but content effectively uses lists without explicit paragraph boundaries",
+                    "Bullet points/numbered lists are strategically used for step-by-step instructions (e.g., 'Create Client-side personalization experience')"
+                ],
+                "suggestions": [
+                    "Standardize section naming by removing redundant elements like '- Inform' in sub-sections",
+                    "Add explicit paragraphs for brief introductions or explanations",
+                    "Maintain consistent indents for hierarchical organization in FAQ sections"
+                ]
+            }
+        ],
+        "completeness": [
+            {
+                "findings": [
+                    {
+                        "section": "Why Is Web Personalization in a Loading State?",
+                        "missingDetails": "Potential root causes and steps to resolve the issue are not specified. For example, administrative system maintenance, network issues, or browser compatibility problems.",
+                        "examplesNeeded": true,
+                        "clarification": "Add examples of scenarios that cause loading state, like server updates or large-scale personalization rule processing."
+                    },
+                    {
+                        "section": "Why Does the Content API Show a 406 Error in Dashboard but a 200 Response in Postman?",
+                        "missingDetails": "Technical reasons for differing API responses are not explained.",
+                        "examplesNeeded": true,
+                        "clarification": "Provide an example of specific API headers (e.g., Accept headers) that might cause the discrepancy and how to fix it."
+                    },
+                    {
+                        "section": "File Contents",
+                        "missingDetails": "Requirements for personalization file formats are vague.",
+                        "examplesNeeded": true,
+                        "clarification": "Include an example of a properly formatted JSON/Payload file used for content blocks."
+                    },
+                    {
+                        "section": "Message Archival and File Naming Convention",
+                        "missingDetails": "Practical implementation steps for archival and naming are missing.",
+                        "examplesNeeded": true,
+                        "clarification": "Clarify time-sensitive naming (e.g., YYYYMMDD_message_type) and provide backup methods beyond the archival suggestion."
+                    }
+                ]
+            },
+            {
+                "findings": {
+                    "steps_or_details_missing": [
+                        "The process for actually creating and configuring an event-triggered campaign (selecting events, assigning triggers, linking content) is not detailed.",
+                        "No examples of specific, measurable business events (e.g., 'User subscribes to a newsletter,' 'User adds items to cart,' 'Account created within 7 days') are provided.",
+                        "Lack of information on how to define the scope or criteria for an event (e.g., specific product categories, minimum spending thresholds).",
+                        "Control Groups are mentioned but not explained how they apply within the campaign creation process.",
+                        "Assumption is made that the reader understands API-driven content (Content Blocks, APIs, Recommendations) without elaboration. The practical implementation steps for these are not covered."
+                    ],
+                    "examples_effective": false,
+                    "suggestions_add_examples_or_clarifications": [
+                        "Provide concrete examples of business events and their corresponding triggers (e.g., 'Business Event: First-time Purchase, Trigger: In-app purchase event with minimal amount', 'Business Event: Account Verification, Trigger: Profile completion event').",
+                        "Illustrate how to set up personalization using Jinja templating with simple code snippets demonstrating variable substitution.",
+                        "Explain the use of Content Blocks with an example showing how they are configured for different platforms.",
+                        "Clarify how to implement and manage A/B testing using Control Groups during campaign creation.",
+                        "Add information on configuring and testing Business Event Triggered Campaigns, including how to specify conditions or lookback periods for events.",
+                        "Offer examples of using the Recommendations API in conjunction with other campaign elements."
+                    ]
+                }
+            }
+        ],
+        "style": [
+            {
+                "raw": "```json\n{\n  \"passive_voice_finding\": \"The provided text consists primarily of static nouns and noun phrases. While technically not sentences, they employ a passive structure inherent in navigation labels. However, the content sections (e.g., \\\"Getting Started\\\", \\\"Restrictions\\\", \\\"Recommendations\\\") present more complex passive voice. Example: \\\"...a user must...\\\" style verbs often appear passive.\",\n  \"complex_jargon_finding\": [\n    {\n      \"term\": \"Server-side Personalization\",\n      \"location\": \"\",\n      \"notes\": \"A technical concept requiring definition in the documentation.\"\n    },\n    {\n      \"term\": \"Split URL testing\",\n      \"location\": \"\",\n      \"notes\": \"A specific technique, likely requiring explanation and context.\"\n    },\n    {\n      \"term\": \"Catalogs\",\n      \"location\": \"May appear in content referencing (as mentioned in \\\"Prerequisites Overview\\\")\",\n      \"notes\": \"Centered term. Ensure definition and usage examples are clear in the documentation.\"\n    },\n    {\n      \"term\": \"User Actions Settings\",\n      \"location\": \"May appear in content settings sections\",\n      \"notes\": \"A configuration area description. Ensure actual settings options and implications are documented.\"\n    },\n    {\n      \"term\": \"Map User Actions\",\n      \"location\": \"May appear as a section title within Settings\",\n      \"notes\": \"Describes a process. Confirm clarity of steps and examples provided.\"\n    },\n    {\n      \"term\": \"Flicker\",\n      \"location\": \"Contextual understanding (how to manage flicker) often uses technical language implicitly\",\n      \"notes\": \"\\\"Manage\\\" here implies technical solutions. Ensure root causes and mitigation strategies are clearly articulated using precise but accessible language.\"\n    }\n  ],\n  \"sentence_length_finding\": \"The text provided has extremely short 'sentences' (mostly one-element labels) and longer titles or categories (e.g., 'Content', 'Content Blocks', 'Pre-requisites', 'Getting Started Overview'). All are generally within the acceptable character length limits for content structure elements and titles.\",\n  \"action_oriented_language_finding\": [\n    \"The text primarily serves as a navigation menu listing and table of contents, rather than instructional guidance for performing actions.\",\n    \"Action-oriented language examples (like verbs) are present only in more general content items (e.g., 'How to manage flicker', 'Getting started', 'Map User Actions Settings'). These descriptions should ideally begin with a strong action verb (e.g., 'You must disable flicker by...', 'To create recommendations, first...').\",\n    \"Navigate to section \\\"Settings\\\" > \\\"Personalization\\\" to access relevant configuration options.\" (This example *is* action-oriented)\n  ]\n}\n```"
+            },
+            {
+                "passive_voice": "No passive voice detected in the provided text snippets.",
+                "complex_jargon": "No complex jargon detected.",
+                "sentence_length": "All items consist of short phrases suitable for navigation menus.",
+                "action_oriented_language": "No action-oriented language needed/possible at this level (menu items).",
+                "necessary_changes": []
+            }
+        ]
+    }
+}
