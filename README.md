@@ -82,8 +82,8 @@ print(f"Analysis Status: {report['status']}")
 python main.py
 ```
 
-This will analyze a sample MoEngage documentation article and generate reports in the `output/` directory.
-
+This will display a Tkinter window that accepts a documentation URL as text and analyze a sample MoEngage documentation article and generate reports in the `output/` directory.
+Upon completion, a success window is displayed.
 ## 📊 Output Examples
 
 ### JSON Report Structure
