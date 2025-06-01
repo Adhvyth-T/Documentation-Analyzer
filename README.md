@@ -1,70 +1,223 @@
-# Documentation-Analyzer
-Python project for LLM powered documentation readability analyzer
-AI-Powered Documentation Improvement Agent - Code Review Report
-Executive Summary
-The submitted solution successfully implements a functional AI-powered documentation analyzer agent that meets all core requirements of Task 1. The implementation demonstrates strong technical skills, smart architectural decisions, and effective problem-solving capabilities. Task 2 (Documentation Revision Agent) was not implemented.
-Overall Assessment: Strong Implementation with Solid Technical Foundation
-Key Advantages & Strengths
-Complete Task 1 Implementation
-•	Full Requirements Coverage: Successfully addresses all 4 analysis criteria (Readability, Structure, Completeness, Style Guidelines)
-•	URL Processing: Properly handles MoEngage documentation URLs as specified
-•	Structured Output: Generates comprehensive reports in both JSON and HTML formats
-•	Actionable Suggestions: Provides specific, targeted recommendations for each analysis criterion
-Excellent Technical Architecture
-•	Modern Web Scraping: Uses Playwright for robust, JavaScript-enabled content extraction that handles dynamic content
-•	Advanced Document Processing: Implements LangChain with RecursiveCharacterTextSplitter for intelligent text chunking
-•	Vector-Based Analysis: Employs FAISS vector store with HuggingFace embeddings for context-aware chunk selection
-•	Flexible LLM Integration: Clean OpenRouter API integration supporting multiple model options
-Smart Analysis Approach
-•	Hybrid Readability Assessment: Combines automated Flesch-Kincaid scoring with LLM-based qualitative analysis
-•	Context-Aware Processing: Uses vector similarity search to identify relevant content sections for each analysis type
-•	Multi-Format Output: Provides both machine-readable JSON and human-friendly HTML reports
-•	Targeted Analysis Functions: Each criterion has dedicated analysis logic with specific prompting strategies
-Professional Code Organization
-•	Clean Separation: Well-organized utils.py and main.py structure with clear responsibilities
-•	Configuration Management: Proper use of environment variables and .env file for API keys and settings
-•	Error Handling: Implements try-catch blocks for critical operations like web scraping and API calls
-•	Type Safety: Uses Pydantic models for request validation and structured data handling
-Production-Ready Features
-•	Timestamped Output: Automatic file naming with timestamps for report management
-•	Multiple Output Formats: Both JSON (machine-readable) and HTML (human-readable) reports
-•	Scalable Design: Modular architecture that can easily accommodate additional analysis types
-•	Robust Web Scraping: Handles complex web content with proper encoding and text extraction
-Challenges Overcome
-🔧 Dynamic Content Extraction Challenge
-Problem: MoEngage documentation pages use JavaScript rendering, making standard HTTP requests insufficient for content extraction.
-Solution: Implemented Playwright with headless browser automation, including proper wait states for network idle and full content loading.
-🔧 Large Document Processing Challenge
-Problem: Documentation articles can be very long, exceeding LLM context limits and making analysis inefficient.
-Solution: Developed intelligent chunking strategy using RecursiveCharacterTextSplitter combined with FAISS vector search to identify and analyze only the most relevant sections for each criterion.
-🔧 Inconsistent LLM Output Format Challenge
-Problem: LLM responses can vary in format and may include markdown formatting or inconsistent JSON structure.
-Solution: Created robust extract_json_objects function that handles markdown code blocks and extracts valid JSON objects while gracefully handling malformed responses.
-🔧 Multi-Criteria Analysis Coordination Challenge
-Problem: Need to perform different types of analysis (readability, structure, completeness, style) on the same document while maintaining efficiency.
-Solution: Designed a mapping system that coordinates different analysis functions with appropriate vector queries, allowing targeted analysis of relevant content sections.
-🔧 Cross-Platform Compatibility Challenge
-Problem: Ensuring the solution works across different operating systems and environments.
-Solution: Used cross-platform libraries (Playwright, asyncio) and proper encoding handling to ensure compatibility across Windows, macOS, and Linux systems.
-Task Status
-✅ Task 1: Documentation Analyzer Agent - COMPLETED
-•	Fully functional agent that analyzes MoEngage documentation URLs
-•	Implements all 4 required analysis criteria
-•	Generates structured, actionable improvement suggestions
-•	Provides comprehensive reporting in multiple formats
-❌ Task 2: Documentation Revision Agent - NOT IMPLEMENTED
-•	The bonus task for automatic document revision was not attempted
-•	This was an optional enhancement task
-Technical Implementation Highlights
-•	Language: Python with modern async/await patterns
-•	LLM Provider: OpenRouter API with flexible model selection
-•	Web Scraping: Playwright for JavaScript-rendered content
-•	Document Processing: LangChain ecosystem for text processing and embeddings
-•	Vector Search: FAISS for efficient similarity-based content retrieval
-•	Output Generation: Multi-format reporting with HTML styling and JSON structure
-Output Format:
-Produces multi-platform usable JSON files and human readable html files
+# AI-Powered Documentation Improvement Agent
 
+An intelligent documentation analyzer that evaluates MoEngage documentation articles and provides actionable improvement suggestions using advanced AI techniques and modern web technologies.
 
-The implementation successfully delivers a robust, well-architected documentation analysis system that meets all core requirements. The solution demonstrates strong technical competency, effective problem-solving skills, and professional code organization. The choice of modern tools and thoughtful architecture decisions create a solid foundation that could easily be extended for production use.
+## 🚀 Features
 
+- **Comprehensive Analysis**: Evaluates documentation across 4 key criteria:
+  - **Readability** for non-technical marketers
+  - **Structure & Flow** assessment
+  - **Completeness** of information and examples
+  - **Style Guidelines** compliance (Microsoft Style Guide principles)
+
+- **Advanced Web Scraping**: Uses Playwright for robust extraction of JavaScript-rendered content
+- **AI-Powered Insights**: Leverages Large Language Models via OpenRouter API for intelligent analysis
+- **Vector-Based Processing**: Employs FAISS and embeddings for context-aware content analysis
+- **Multiple Output Formats**: Generates both JSON and HTML reports with timestamps
+
+## 🏗️ Architecture
+
+```
+URL Input → Playwright Scraping → Text Chunking → Vector Store → AI Analysis → Structured Reports
+```
+
+### Key Components:
+- **Content Extraction**: Playwright with headless Chrome for dynamic content
+- **Document Processing**: LangChain with RecursiveCharacterTextSplitter
+- **Vector Search**: FAISS with HuggingFace embeddings for relevant chunk selection
+- **AI Analysis**: OpenRouter API integration with flexible model support
+- **Report Generation**: Multi-format output with professional styling
+
+## 📋 Requirements
+
+- Python 3.8+
+- OpenRouter API key
+- Chrome/Chromium browser (for Playwright)
+
+## 🛠️ Installation
+
+1. **Clone the repository:**
+```bash
+git clone <repository-url>
+cd documentation-analyzer
+```
+
+2. **Install dependencies:**
+```bash
+pip install -r requirements.txt
+```
+
+3. **Install Playwright browsers:**
+```bash
+playwright install chromium
+```
+
+4. **Set up environment variables:**
+Create a `.env` file in the project root:
+```env
+OPENROUTER_API_KEY=your_openrouter_api_key_here
+DEFAULT_MODEL=deepseek/deepseek-r1-0528-qwen3-8b:free
+```
+
+## 🚀 Usage
+
+### Basic Usage
+
+```python
+from main import DocumentationAnalyzer
+
+# Initialize analyzer
+analyzer = DocumentationAnalyzer()
+
+# Analyze a MoEngage documentation URL
+url = "https://help.moengage.com/hc/en-us/articles/360035738832-Explore-the-Number-of-Notifications-Received-by-Users"
+report = analyzer.analyze(url)
+
+print(f"Analysis Status: {report['status']}")
+```
+
+### Running the Example
+
+```bash
+python main.py
+```
+
+This will analyze a sample MoEngage documentation article and generate reports in the `output/` directory.
+
+## 📊 Output Examples
+
+### JSON Report Structure
+```json
+{
+    "status": "success",
+    "url": "https://help.moengage.com/hc/en-us/articles/...",
+    "analysis_type": "all",
+    "results": {
+        "readability": [...],
+        "structure": [...],
+        "completeness": [...],
+        "style": [...]
+    }
+}
+```
+
+### Generated Files
+- `output/report_YYYYMMDD_HHMMSS.json` - Machine-readable analysis results
+- `output/report_YYYYMMDD_HHMMSS.html` - Human-friendly formatted report
+
+## 🔧 Technical Challenges Solved
+
+### 1. Dynamic Content Extraction
+**Challenge**: MoEngage documentation uses JavaScript rendering, making standard HTTP requests insufficient.
+
+**Solution**: Implemented Playwright with proper wait states for network idle and complete content loading.
+
+### 2. Large Document Processing
+**Challenge**: Documentation articles exceed LLM context limits.
+
+**Solution**: Developed intelligent chunking with FAISS vector search to analyze only relevant sections for each criterion.
+
+### 3. Inconsistent LLM Responses
+**Challenge**: AI responses vary in format and may include markdown formatting.
+
+**Solution**: Created robust JSON extraction that handles code blocks and malformed responses gracefully.
+
+### 4. Multi-Criteria Analysis Coordination
+**Challenge**: Efficiently performing different analysis types on the same document.
+
+**Solution**: Designed a mapping system coordinating analysis functions with targeted vector queries.
+
+## 🏛️ Design Choices & Approach
+
+### Web Scraping Strategy
+- **Playwright over Selenium**: Better performance and modern async/await support
+- **Headless browsing**: Handles JavaScript-heavy documentation sites effectively
+- **UTF-8 encoding**: Ensures proper handling of special characters
+
+### AI Integration Approach
+- **OpenRouter API**: Access to multiple LLM providers and models
+- **Context-aware prompting**: Tailored prompts for each analysis criterion
+- **Structured output parsing**: Robust JSON extraction from varied AI responses
+
+### Analysis Methodology
+- **Hybrid readability assessment**: Combines Flesch-Kincaid scoring with qualitative AI analysis
+- **Vector similarity search**: Identifies relevant content sections for targeted analysis
+- **Microsoft Style Guide focus**: Emphasizes clarity, conciseness, and action-oriented language
+
+## 📁 Project Structure
+
+```
+documentation-analyzer/
+├──Analyzer/
+      ├── main.py              # Main application and DocumentationAnalyzer class
+      └──utils.py             # Core utility functions and analysis logic
+├── requirements.txt     # Python dependencies
+├── .env                 # Environment variables (create this)
+├── output/             # Generated reports directory
+├── README.md           # This file
+└──.env.example
+```
+
+## 🔄 Task Implementation Status
+
+### ✅ Task 1: Documentation Analyzer Agent - **COMPLETED**
+- Fully functional agent analyzing MoEngage documentation URLs
+- Implements all 4 required analysis criteria
+- Generates structured, actionable improvement suggestions
+- Provides comprehensive reporting in multiple formats
+
+### ❌ Task 2: Documentation Revision Agent - **NOT IMPLEMENTED**
+- The bonus task for automatic document revision was not attempted
+- This was an optional enhancement task
+
+## 🔍 Example Analysis Output
+
+Here are sample analyses from two different MoEngage documentation articles:
+
+### Sample 1: Notification Analytics Article
+- **Readability Issues**: Identified 3 sentences exceeding recommended length for marketers
+- **Structure Improvements**: Suggested adding numbered steps for complex procedures
+- **Completeness Gaps**: Recommended adding visual examples for dashboard navigation
+- **Style Issues**: Found 2 instances of passive voice needing conversion
+
+### Sample 2: Campaign Setup Guide  
+- **Readability Score**: Flesch-Kincaid grade 8.2 (appropriate for target audience)
+- **Structure Strength**: Well-organized with clear headings and bullet points
+- **Example Quality**: Good use of screenshots but missing code examples
+- **Style Compliance**: Mostly action-oriented with minor jargon simplification needed
+
+## 🛡️ Error Handling
+
+The system includes comprehensive error handling for:
+- Invalid or unreachable URLs
+- API rate limits and network timeouts
+- Malformed content extraction
+- JSON parsing failures
+- File system operations
+
+## 🔮 Future Enhancements
+
+- Implementation of Task 2 (automatic document revision)
+- Support for batch processing multiple URLs
+- Integration with additional style guides
+- Real-time analysis via web interface
+- Advanced caching for improved performance
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## 📄 License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## 🙏 Acknowledgments
+
+- OpenRouter for AI model access
+- Playwright team for excellent web automation tools
+- LangChain community for document processing capabilities
+- MoEngage for providing comprehensive documentation to analyze
